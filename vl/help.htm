@@ -1,0 +1,111 @@
+<html>
+<HEAD>
+<TITLE>Searching the Virtual Library</TITLE>
+<!-- Dublin Core tags --> 
+<meta name="DC.Title" content="WWW Virtual Library: Searching the Virtual Library">
+<meta name="DC.Creator" content="Gerard Manning">
+<meta name="DC.Creator.Address" content="ger@vlib.stanford.edu">
+<meta name="DC.Publisher" content="WWW Virtual Library">
+<meta name="DC.Type" content="Bibliography">
+<meta name="DC.Format" scheme="IMT" content="text/html">
+<meta name="DC.Identifier" content="http://www.w3.org/vl/">
+<meta name="DC.Language" scheme="ISO639-1" content="en">
+<meta name="DC.Rights" scheme="URL" content="http://vlib.org/admin/Copyright.html">
+
+<META name="description" content = "Help file for the Virtual Library search engine">
+<META name="keywords" content="reference, web, directory, catalog, search engine, www, 
+library, collaborate, volunteer">
+
+</HEAD>
+
+<BODY BGCOLOR="#DDDDDD">
+
+<!--  START :: TEXT INSERTED BY ROSMARIE ERBEN AND GAUDEN GALEA ON APRIL 23, 2005 :: START -->
+<div style="border: 1px solid black; color: black; text-align: center; padding: 1em; background: white; font-family: sans-serif;">
+This site is being preserved as it was on 17 September 2001 as a memorial to the life and work of Eberhard Wenzel. <br />
+The <a href="http://sphcm.med.unsw.edu.au/sphcm.nsf/website/forstudents.resources.ldb">public health virtual library</a> is now updated and hosted by the UNSW School of Public Health. 
+</div>
+<!--  END :: TEXT INSERTED BY ROSMARIE ERBEN AND GAUDEN GALEA ON APRIL 23, 2005 :: END --> 
+<A HREF="http://vlib.org/"><IMG ALT="logo" <img src="gif/Virt_Lib.gif" ALT="VL logo"
+width="48" height="48" ALIGN=LEFT VSPACE=10 BORDER=0></A>
+<CENTER><br><H1>Searching the Virtual Libray</H1>
+</CENTER>
+
+<br clear=all>
+
+<P>
+Our search engine searches all the constituent sites of the Virtual Library. For the quickest 
+search, just use the default options, type your search term and go. You can also modify the 
+search parameters:
+
+<H3>Match</H3>
+<BLOCKQUOTE><DL>
+	<DT><B>All</B>
+		<DD>All the words in the search field must be present in the document
+	<DT><B>Any</B>
+		<DD>Any of the words must be present (you can enter several synonyms here)
+	<DT><B>Boolean</B>
+		<DD>Explicit Boolean seach using AND/OR/NOT to define the query
+</DL>
+</BLOCKQUOTE><H3>Format</H3>
+<BLOCKQUOTE><DL>
+	<DT><B>Long</B>
+		<DD>Displays the titles, starting text and statistics on the matching pages.
+	<DT><B>Short</B>
+		<DD>Displays just the page titles
+</DL>
+</BLOCKQUOTE><H3>Sort by</H3>
+<DL>
+<BLOCKQUOTE>	<DT><B>Score</B>
+		<DD>Higher scoring pages are displayed first. Score depends on how many of the search terms match where in the document.
+	<DT><B>Time</B>
+		<DD>Most recently changed documents are listed first
+	<DT><B>Title</B>
+		<DD>Alphabetical indexing by title
+	<DT><B>Reverse...</B>
+		<DD>The sorting by any of these criteria can be reversed.
+</DL>
+<P>
+<hr>
+<P>
+<table border="0" cellspacing="0" cellpadding="3">
+<form method="post" action="http://vl.bwh.harvard.edu/cgi-bin/htsearch">
+<td>
+      <strong>Search the WWW Virtual Library: </strong>
+                <input type="text" size="30" name="words" value="">
+          <input type="submit" value="Search">
+        </p>
+
+        <p>Match:
+          <select name=method>
+            <option value=and>All
+            <option value=or>Any
+            <option value=boolean>Boolean
+          </select>
+          Format:
+          <select name=format>
+            <option value=builtin-long>Long
+            <option value=builtin-short>Short
+          </select>
+          Sort by:
+          <select name=sort>
+            <option value=score>Score
+            <option value=time>Time
+            <option value=title>Title
+            <option value=revscore>Reverse Score
+            <option value=revtime>Reverse Time
+            <option value=revtitle>Reverse Title
+          </select>
+          <input type=hidden name=config value=htdig>
+          <input type=hidden name=restrict value="">
+          <input type=hidden name=exclude value="">
+        <td>
+</form>
+</table>
+
+<P>
+<HR>
+</P>
+
+</BODY>
+</HTML>
