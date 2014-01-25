@@ -3,7 +3,7 @@ Script to add creative commons license
 to the top of each HTML page, and to remove
 the outdated link to the UNSW virtual library.
 
-by: Gauden Galea
+by: Gauden Galea http://gaudengalea.com
 date: 25-Jan-2014
 """
 
@@ -20,38 +20,38 @@ LDB = path('..')
 
 
 def save_file(f, data):
-	result = False
-	try:
-		with open(f, 'wb') as fh:
-			fh.write(data)
-		result = True
-	except:
-		result = False
-	return result
+    result = False
+    try:
+        with open(f, 'wb') as fh:
+            fh.write(data)
+        result = True
+    except:
+        result = False
+    return result
 
 
 def walk(ndl, rep):
-	count = 0
-	for f in LDB.walk():
-		top_dir = f.splitall()[1]
-		if top_dir in ['src', '.git'] or f.isdir() or not f.endswith('htm'):
-			continue
-		data = f.text()
-		if ndl not in data:
-			print 'No NEEDLE found in: "{}"'.format(f)
-		else:
-			data = data.replace(ndl, rep)
-			if save_file(f, data):
-				print '{} Replacement completed in: "{}"'.format(count, f)
-				count += 1
-			else:
-				print 'ERROR in: "{}"'.format(f)
-		
+    count = 0
+    for f in LDB.walk():
+        top_dir = f.splitall()[1]
+        if top_dir in ['src', '.git'] or f.isdir() or not f.endswith('htm'):
+            continue
+        data = f.text()
+        if ndl not in data:
+            print 'No NEEDLE found in: "{}"'.format(f)
+        else:
+            data = data.replace(ndl, rep)
+            if save_file(f, data):
+                print '{} Replacement completed in: "{}"'.format(count, f)
+                count += 1
+            else:
+                print 'ERROR in: "{}"'.format(f)
+        
 
 def main():
-	walk(ndl=NEEDLE,
-		 rep=REPLACEMENT)
+    walk(ndl=NEEDLE,
+         rep=REPLACEMENT)
 
 
 if __name__ == '__main__':
-	main()
+    main()
