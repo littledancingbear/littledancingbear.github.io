@@ -5,6 +5,7 @@ the outdated link to the UNSW virtual library.
 
 by: Gauden Galea http://gaudengalea.com
 date: 25-Jan-2014
+license: Public Domain
 """
 
 from path import path
