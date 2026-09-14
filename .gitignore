@@ -1,0 +1,5 @@
+# Local-only helper scripts (not part of the published site)
+bin/
+
+# macOS finder metadata
+.DS_Store
